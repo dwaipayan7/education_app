@@ -1,4 +1,5 @@
 import 'package:education_app/models/category.dart';
+import 'package:education_app/pages/course_page.dart';
 import 'package:education_app/utils/color.dart';
 import 'package:flutter/material.dart';
 
@@ -63,7 +64,15 @@ class _FeaturedScreenState extends State<FeaturedScreen> {
                   itemBuilder: (context, index) {
                     final category = categoryList[index];
                     return GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                CoursePage(category: category),
+                          ),
+                        );
+                      },
                       child: Container(
                         padding: EdgeInsets.all(10),
                         decoration: BoxDecoration(
