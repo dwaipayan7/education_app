@@ -3,6 +3,8 @@ import 'package:education_app/models/course.dart';
 import 'package:education_app/widgets/custom_icon_button.dart';
 import 'package:flutter/material.dart';
 
+import 'course_details_page.dart';
+
 class CoursePage extends StatefulWidget {
   final Category category;
   const CoursePage({super.key, required this.category});
@@ -62,7 +64,15 @@ class _CoursePageState extends State<CoursePage> {
                   itemBuilder: (context, index) {
                     final course = filteredCourses[index];
                     return GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                CourseDetailsPage(course: course),
+                          ),
+                        );
+                      },
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),

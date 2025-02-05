@@ -1,3 +1,4 @@
+import 'package:education_app/pages/course_details_page.dart';
 import 'package:education_app/pages/education_app_main_page.dart';
 import 'package:flutter/material.dart';
 
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: EducationAppMainPage(),
+      // home: CourseDetailsPage(),
     );
   }
 }
