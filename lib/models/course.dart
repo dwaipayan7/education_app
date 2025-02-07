@@ -17,7 +17,7 @@ class Course {
 
 List<Course> courses = [
   Course(
-    author: "Mr.John Doe",
+    author: "Mr. Dwaipayan Biswas",
     categoryName: "App Development",
     completedPercentage: .8,
     name: "Flutter Developer Course",

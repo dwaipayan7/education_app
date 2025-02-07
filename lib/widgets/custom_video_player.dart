@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
@@ -61,7 +62,7 @@ class _MyVideoPlayerState extends State<MyVideoPlayer> {
       height: 200,
       width: double.infinity,
       child: Center(
-        child: CircularProgressIndicator(),
+        child: CupertinoActivityIndicator(),
       ),
     );
   }
